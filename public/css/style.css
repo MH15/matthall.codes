@@ -15,6 +15,8 @@ section {
 header {
     display: flex;
     justify-content: space-between;
+    height: 3vw;
+    padding-top: 1vw;
 }
 
 header #logo {
