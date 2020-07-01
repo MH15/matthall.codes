@@ -3,6 +3,15 @@ section {
     max-width: 700px;
 }
 
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.split {
+    flex: 1;
+}
+
 header {
     display: flex;
     justify-content: space-between;
