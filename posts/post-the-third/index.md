@@ -9,3 +9,7 @@ tags:
 ---
 
 content
+
+![photo](ant.jpg)
+
+more content

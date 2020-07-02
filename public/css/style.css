@@ -4,6 +4,10 @@
     font-family: "Source Serif Pro", sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
 section#page-container {
     position: relative;
     min-height: 100vh;
