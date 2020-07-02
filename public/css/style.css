@@ -1,6 +1,38 @@
-section {
+:root {
+    --side-padding: 2vw;
+    --footer-height: 3rem;
+    font-family: "Source Serif Pro", sans-serif;
+}
+
+section#page-container {
+    position: relative;
+    min-height: 100vh;
     margin: 0 auto;
     max-width: 700px;
+    width: 100%;
+    /* padding-left: 1vw;
+    padding-right: 1vw; */
+}
+
+#content-wrap {
+    padding-bottom: var(--footer-height);
+    /* Footer height */
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);
+    /* Footer height */
+}
+
+footer {
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+    /* padding-bottom: 1rem; */
 }
 
 .row {
@@ -10,17 +42,23 @@ section {
 
 .split {
     flex: 1;
-
-    
 }
 
 header {
     display: flex;
     justify-content: space-between;
     height: 3vw;
-    padding-top: 1vw;
+    padding-top: 2vw;
 }
 
 header #logo {
     font-weight: bold;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
 }
