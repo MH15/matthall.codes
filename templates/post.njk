@@ -3,15 +3,18 @@
 {% block body %}
     <h1>{{attributes.title}}</h1>
     <p>
-        By 
-        {# Loop through all authors #}
-        {% set comma = joiner(", ") %}
-        {%- for author in authors -%}
-            {{- comma() -}}
-            <a href="/author/{{ author.username }}">{{- author.name -}}</a>
-        {%- else -%}
-            No author.
-        {%- endfor -%}
+        {% if authors | length > 0 %}
+            By
+            {# Loop through all authors #}
+            {% set comma = joiner(", ") %}
+            {%- for author in authors -%}
+                {{- comma() -}}
+                <a href="/author/{{ author.username }}">{{- author.name -}}</a>
+            {%- else -%}
+                No author.
+            {%- endfor -%}
+        {% endif %}
+
     </p>
     <p>
         Tagged:

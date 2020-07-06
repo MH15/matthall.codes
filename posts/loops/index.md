@@ -1,8 +1,6 @@
 ---
 title: All the Loops
-date_published: 2020-7-8
-authors:
-    - matt-hall
+date_published: 2020-7-6
 tags:
     - javascript
     - reference
@@ -121,4 +119,4 @@ var filtered = arr.filter(filter)
 Does not mutate the source array.
 
 ## Addendum
-Nothing here for now.
+Discuss on [HN](https://news.ycombinator.com/item?id=23751168)
