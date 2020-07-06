@@ -15,6 +15,16 @@ and for others, written to augment the [existing](https://developer.mozilla.org/
 An array `arr` is defined for all the below examples. The sample code for each
 looping construct performs the same behavior.
 
+## Table of Contents
+- [`for` statement](#for-statement)
+- [`do...while` statement](#dowhile-statement)
+- [`while` statement](#while-statement)
+- [`for...in` statement](#forin-statement)
+- [`for...of` statement](#forof-statement)
+- [`map` prototype](#map-prototype)
+- [`reduce` prototype](#reduce-prototype)
+- [`filter` prototype](#filter-prototype)
+
 ## Basic Loop Constructs
 
 ### [`for` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
@@ -98,18 +108,13 @@ not included in the `arr.reduce()` call, the initial value is set to `array[0]`
 and that first index will be skipped in the loop.
 
 ### [`filter` prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-Calls a filter callback to create a filtered array from the source array. This
-useless filter function below illustrates the behavior. The `filter` prototype
-is very useful for cleaning *sparse arrays* or for, of course, filtering data
+Calls a filter callback to create a filtered array from the source array. The `filter` prototype
+is very useful for cleaning *sparse arrays* as illustrated below or for, of course, filtering data
 based on a condition in a more readable manner than with a `for` loop.
 ```javascript
 function filter(value, index, array) {
     console.log(index, value)
-    if (value == "b") {
-        return true
-    } else {
-        return false
-    }
+    return typeof value !== 'undefined'
 }
 var filtered = arr.filter(filter)
 ```
