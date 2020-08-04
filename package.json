@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "neanderthal": "^0.1.9"
+    "neanderthal": "^0.1.12"
   }
 }

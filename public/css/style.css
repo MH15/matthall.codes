@@ -15,6 +15,11 @@ img {
     width: 100%;
 }
 
+pre {
+    width: 100%;
+    overflow-x: scroll;
+}
+
 section#page-container {
     position: relative;
     min-height: 100vh;

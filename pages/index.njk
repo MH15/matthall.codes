@@ -1,25 +1,31 @@
 {% extends "templates/base.njk" %}
 
 {% block body %}
-<p>{{ meta.description }}</p>
+  <p>{{ meta.description }}</p>
 
-<div class="row">
+  <div class="row">
     <div class="split">
-        <h1>Read my posts</h1>
-        <p>or view the <a href="/blog">blog archive</a></p>
-        <ul>
-            <li>link</li>
-        </ul>
+      <h1>Read my posts</h1>
+      <p>or view the <a href="/blog">blog archive</a>
+      </p>
+      {# <ul>
+        <li>
+          <a href="/blog/loops">All the Loops</a>
+        </li>
+      </ul> #}
+      {% markdown %}
+      - [All the Loops](/blog/loops) - a reference of the iterator primitives in modern JavaScript
+      {% endmarkdown %}
     </div>
 
     <div class="split">
-        <h1>View my work</h1>
-        <p>links to projects here and elsewhere</p>
-        <ul>
-            <li>link</li>
-        </ul>
+      <h1>View my work</h1>
+      <p>links to projects here and elsewhere</p>
+      <ul>
+        <li>link</li>
+      </ul>
     </div>
 
-</div>
+  </div>
 
 {% endblock %}
