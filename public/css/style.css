@@ -17,7 +17,7 @@ img {
 
 pre {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 section#page-container {
