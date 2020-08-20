@@ -78,3 +78,12 @@ header #logo {
 .center {
     margin: 0 auto;
 }
+
+h1,
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 6px;
+}
