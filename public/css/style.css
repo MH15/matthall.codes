@@ -4,6 +4,10 @@
     font-family: "Source Serif Pro", sans-serif;
 }
 
+li {
+    padding-bottom: 5px;
+}
+
 @media screen and (min-width: 960px) {
     html {
         margin-left: calc(100vw - 100%);
@@ -79,7 +83,10 @@ header #logo {
     margin: 0 auto;
 }
 
-h1,
+h1 {
+    margin-top: 0;
+    /* margin-bottom: 6px; */
+}
 h2 {
     margin-bottom: 0;
 }
