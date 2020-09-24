@@ -67,8 +67,9 @@ footer {
 header {
     display: flex;
     justify-content: space-between;
-    height: 3vw;
+    /* height: 3vw; */
     padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 header #logo {
@@ -84,8 +85,8 @@ header #logo {
 }
 
 h1 {
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 0;
+    /* margin-bottom: 6px; */
 }
 h2 {
     margin-bottom: 0;
