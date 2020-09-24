@@ -1,5 +1,5 @@
 ---
-title: Creating an Entity-Component-System
+title: Creating an Entity-Component-System in C#
 date_published: 2020-9-25
 authors:
     - matt-hall
