@@ -23,7 +23,7 @@ class Component
     public virtual void Update(GameTime gameTime) { }
 }
 ```
-Each component type subsclasses `Component`. I'll include a `Transform` type below as an example:
+Each component type subclasses `Component`. I'll include a `Transform` type below as an example:
 ```csharp
 class Transform : Component
 {
@@ -58,7 +58,6 @@ class Entity
     {
         components.Add(component);
         component.entity = this;
-        component.Init();
     }
 }
 ```
@@ -79,7 +78,7 @@ class MyAwesomeCharacter : Entity
         // add a `Sprite` component to store the character's texture
         Sprite sprite = new Sprite();
         sprite.texture = tex;
-        AddComponent(Sprite); // Assume `Sprite : Component`
+        AddComponent(sprite); // Assume `Sprite : Component`
     }
 }
 
@@ -93,9 +92,9 @@ class Sprite : Component
 {
     Texture2D texture;
 
-    public virtual void Update(GameTime gameTime) {
+    public virtual void Update(float gameTime) {
         // We'd like to do something like this:
-        Transform t = GetComponent<Transform>();
+        Transform t = entity.GetComponent<Transform>();
         GameEngine.DrawSprite(texture, t.position); // assume the fictitious GameEngine class
     }
 }
@@ -107,16 +106,16 @@ class Entity
     ... // class properties and AddComponent method
 
     public T GetComponent<T>() where T : Component
+    {
+        foreach (Component component in components)
         {
-            foreach (Component component in components)
+            if (component.GetType().Equals(typeof(T)))
             {
-                if (component.GetType().Equals(typeof(T)))
-                {
-                    return (T)component;
-                }
+                return (T)component;
             }
-            return null;
         }
+        return null;
+    }
 }
 ```
 This just magically *works*. Well, it's not magic, C# just has nice [reflection](https://en.wikipedia.org/wiki/Reflection_(computer_programming)) capabilities built in. This will allow *any component* to access *any other component* on the same Entity.
@@ -162,9 +161,9 @@ class BaseSystem<T> where T : Component
     }
 }
 
-class TransformSystem : BaseTransform<Transform> { }
-class SpriteSystem : BaseTransform<Sprite> { }
-class ColliderSystem : BaseTransform<Collider> { }
+class TransformSystem : BaseSystem<Transform> { }
+class SpriteSystem : BaseSystem<Sprite> { }
+class ColliderSystem : BaseSystem<Collider> { }
 ```
 Now, if we make a change to our component implementations:
 ```cs
@@ -173,17 +172,23 @@ class Transform : Component
     ... // properties
 
     public Transform() {
-        TransformSystem.Register(this)
+        TransformSystem.Register(this);
     }
 
     ... // methods
 }
 ```
-... we've allowed for the CPU to pull only the components it is processing.
+... we've allowed for the CPU to pull only the components it is processing. In our main game loop we can run the following for any types of components we are using:
+```cs
+TransformSystem.Update(gameTime);
+SpriteSystem.Update(gameTime);
+ColliderSystem.Update(gameTime);
+```
+This will still update all our components but with better performance then the naive solution. As an added benefit, we can now be sure we update all colliders before we render all sprites, and ensure other gameplay-critical orderings remain intact.
 
 
 ## Addendum
-<!-- The complete code for this Entity-Component-System can be found on [Github]() -->
+The complete code for this Entity-Component-System can be found on [Github](https://github.com/MH15/blog-examples/tree/master/ecs).
 Please let me know if there's anything I can do to improve this ECS implementation!
 
 ### Footnotes
