@@ -15,10 +15,10 @@ looping construct performs the same behavior.
 
 ## Table of Contents
 - [`for` statement](#for-statement)
-- [`do...while` statement](#dowhile-statement)
+- [`do...while` statement](#do...while-statement)
 - [`while` statement](#while-statement)
-- [`for...in` statement](#forin-statement)
-- [`for...of` statement](#forof-statement)
+- [`for...in` statement](#for...in-statement)
+- [`for...of` statement](#for...of-statement)
 - [`map` prototype](#map-prototype)
 - [`reduce` prototype](#reduce-prototype)
 - [`filter` prototype](#filter-prototype)

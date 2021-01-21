@@ -95,3 +95,12 @@ h2 {
 p {
     margin-top: 6px;
 }
+
+.header-anchor {
+    margin-left: -20px;
+    opacity: 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover a.header-anchor {
+    opacity: 1;
+}
