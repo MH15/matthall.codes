@@ -13,11 +13,11 @@ I'm extremely interested in the field of programming languages and how their dif
 ## Core Goals
 **Fast Iteration** - implement a REPL and a rapid compile/test loop\
 **Familiar Syntax** - a C-style syntax with curly brackets (but no semicolons of course)\
-**Module System** - a 
+**Module System** - one of the more important things in a language IMO, more to come
 **First-class Functions** - functions may be passed around like object instances or any primitive type\
 **Type System** - statically typed with type inference\
 **Integrated Event Loop** - a la JavaScript\
-**Write Less Code** - minimize surface area of programs implemented using this language\
+**Write Less Code** - minimize surface area of programs implemented using this language
 
 _Note: performance is explicity not a goal, nor is competition with existing languages_
 
