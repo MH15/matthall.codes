@@ -16,8 +16,8 @@
         {% endif %}
 
     </p>
-    <p>
-        Tagged:
+    <p class="post-meta">
+        Published {{attributes.date_published}}, Tagged:
         {# Loop through all tags #}
         {% set space = joiner(" ") %}
         {% for tag in attributes.tags -%}

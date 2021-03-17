@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --side-padding: 2vw;
     --footer-height: 3rem;
@@ -103,4 +107,17 @@ p {
 
 :is(h1, h2, h3, h4, h5, h6):hover a.header-anchor {
     opacity: 1;
+}
+
+.post-meta {
+    opacity: 0.9;
+    background-color: rgb(225, 225, 225);
+    padding-top: 4px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    margin-right: 7px;
+    border-left: #b7b7b7 5px solid;
+    /* font-style: italic; */
 }
