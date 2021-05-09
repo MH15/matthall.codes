@@ -2,10 +2,22 @@
     box-sizing: border-box;
 }
 
+/* Define the "system" font family */
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"),
+        local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 :root {
     --side-padding: 2vw;
     --footer-height: 3rem;
-    font-family: "Source Serif Pro", sans-serif;
+    /* font-family: "Source Serif Pro", sans-serif; */
+    /* font-family: system; */
+    font-family: "Iowan Old Style", "Apple Garamond", "Baskerville", "Droid Serif", "Source Serif Pro", serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 li {
