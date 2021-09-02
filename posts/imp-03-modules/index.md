@@ -17,7 +17,7 @@ The language project has come a long way since the [last post](/blog/imp-02-addi
 
 ## Design
 
-I didn't have many opinions on the module system going in, but I new I wanted it to further the main goal of the Imp language, *to support programmer confidence*. This meant that all imports and exports needed to be type-checked and valdiated at compile time and designed in a way that will support dot-autocomplete in the future. I am a fan of file-based modules (think an implicit namespace) in the format most popular with NodeJS modules. Several people helped me design the syntax for import statements that fulfil the above goals.
+I didn't have many opinions on the module system going in, but I new I wanted it to further the main goal of the Imp language, *to support programmer confidence*. This meant that all imports and exports needed to be type-checked and validated at compile time and designed in a way that will support dot-autocomplete in the future. I am a fan of file-based modules (think an implicit namespace) in the format most popular with NodeJS modules. Several people helped me design the syntax for import statements that fulfill the above goals.
 
 ### Imports
 
