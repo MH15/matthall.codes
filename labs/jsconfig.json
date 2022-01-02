@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es2020",
+        "checkJs": true,
+        "lib": [
+            "dom",
+            "esnext"
+        ],
+        "strictFunctionTypes": true
+    },
+    "include": [
+        "**/*",
+        "./types.d.ts"
+    ],
+    "typeAcquisition": {
+        "enable": true,
+        "include": [
+            "gl-matrix",
+            "dat.gui"
+        ]
+    }
+}
