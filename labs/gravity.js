@@ -2,6 +2,7 @@
 import Stats from "./lib/stats.module.js";
 import { Patch } from './lib/nodes/patch.js';
 import { createProgram, createShader, initGL, setUniform1f, setUniform2f, setUniform3f } from "./lib/shader.js";
+import { randi } from "./lib/math.js";
 
 const vertShader = document.querySelector("#vertex-shader").innerHTML
 const fragShader = document.querySelector("#fragment-shader").innerHTML
@@ -103,15 +104,18 @@ let points = []
 
 const w = canvas.width
 const h = canvas.height
-const spacing = SPACING // px
 const rows = 100
 const cols = 100
 
+let aspect = w / h * .50
+console.log(aspect)
+const ratioA = randi(3, 18) / 10
+const ratioB = randi(5, 18) / 10
 
 for (let r = 0; r <= rows; r++) {
     for (let c = 0; c <= cols; c++) {
         const i = r * cols + c
-        points.push(((c / cols) - .5) * 1.5, (r / rows - .5) * 1.5)
+        points.push(((c / cols) - .5) * ratioA, (r / rows - .5) * ratioB)
     }
 }
 
