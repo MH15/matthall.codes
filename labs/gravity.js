@@ -111,7 +111,7 @@ const cols = 100
 for (let r = 0; r <= rows; r++) {
     for (let c = 0; c <= cols; c++) {
         const i = r * cols + c
-        points.push(((c / cols) - .5) * 1.25, (r / rows - .5) * 1.25)
+        points.push(((c / cols) - .5) * 1.7, (r / rows - .5) * 1.7)
     }
 }
 
