@@ -133,3 +133,11 @@ p {
     border-left: #b7b7b7 5px solid;
     /* font-style: italic; */
 }
+
+a {
+    color: rgb(0, 0, 126);
+}
+
+a:visited {
+    color: rgb(0, 0, 95);
+}
