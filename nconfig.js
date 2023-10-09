@@ -8,7 +8,7 @@ module.exports = {
     // The `meta` object is sent to every template.
     meta: {
         title: "Matt Hall",
-        description: "This is the homepage of Matt Hall, Software Engineer at Google in Irvine, California.",
+        description: "This is the homepage of Matt Hall, a Software Engineer.\n Find me in the San Francisco Bay Area.",
         author: "Matt Hall",
     },
     // All authors must be defined here.
