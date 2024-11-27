@@ -1,38 +1,15 @@
 {% extends "templates/base.njk" %}
 
 {% block body %}
-  <p>This is the homepage of Matt Hall, a Software Engineer.<br/>You can find me in the San Francisco Bay Area, building <a href="https://akkio.com">Akkio</a>.</p>
+  <p>This is the (outdated) homepage of Matt Hall, a Software Engineer.<br/>You can find me in the San Francisco Bay Area, building <a href="https://akkio.com">Akkio</a>.</p>
 
-  <div class="row">
-    <div class="split">
-      <h1>Read my posts</h1>
-      <p>or view the <a href="/blog">blog archive</a>
-      </p>
-      {# <ul>
-        <li>
-          <a href="/blog/loops">All the Loops</a>
-        </li>
-      </ul> #}
-      {% markdown %}
-      - [Module System Implementation](/blog/imp-03-modules) - developing compile-time imports
-      - [Adding Structs to Imp](/blog/imp-02-adding-structs) - adding the ability to define custom types to my programming language
-      - [Compiling to JVM bytecode](/blog/imp-jvm-compilation) - writing a compiler for my programming language
-      - [Creating an Entity-Component-System in C#](/blog/ecs) - a game architecture discussion
-      - [All the Loops](/blog/loops) - a reference of the iterator primitives in modern JavaScript
-      {% endmarkdown %}
-    </div>
+  <p>
+      Before that, I worked at Google on the <a href="https://support.google.com">Google Support</a> editor.
+  </p>
 
-    <div class="split">
-      <h1>View my work</h1>
-      <p>links to projects here and elsewhere</p>
-      {% markdown %}
-      - [The Woods](https://kyoungswearingen.com/the-woods) - mixed reality
-      two-player cooperative game developed at [ACCAD](https://accad.osu.edu/) and accepted at [SIGGRAPH 2021](https://s2021.siggraph.org/presentation/?id=artps_122&sess=sess220)
-      - [Neanderthal](https://github.com/mh15/neanderthal) - a static hypertext generator for your blog or website
-      - [Dungeon Crawler](https://github.com/mh15/CSE3541-final-project) - my winning submission for the Computer Graphics techniques class at OSU
-      {% endmarkdown %}
-    </div>
+  <p>
+    Here's a copy of my <a href="/public/downloads/Matt Hall Resume (11_20_24).pdf">resume</a>.
+</p>
 
-  </div>
 
 {% endblock %}
